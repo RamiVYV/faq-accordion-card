@@ -1,0 +1,127 @@
+/* -------------------FONTS------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* -------------------VAR-------------------- */
+:root{
+--Very_dark_desaturated_blue: hsl(238, 29%, 16%);
+--Soft_red: hsl(14, 88%, 65%);
+--Soft_violet: hsl(273, 75%, 66%);
+--Soft_blue: hsl(240, 73%, 65%);
+--kumhs: 'Kumbh Sans', sans-serif;
+}
+/* -------------------ALL-------------------- */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 12px;
+    font-family: var(--kumhs);
+    background: linear-gradient(var(--Soft_violet) , var(--Very_dark_desaturated_blue));
+    
+}
+/* ----------------------MAIN---------------- */
+.card{
+    background-color:white;
+    width:20.5rem;
+    min-height: 34rem;
+    margin: 8rem auto;
+    padding: 8rem 2rem 2rem 2rem ;
+    font-size: .7rem;
+    border-radius: 2rem;
+    box-shadow: 0 15px 20px;
+}
+.card__title{
+    font-size: 1.5rem;
+    text-align: center;
+    
+}
+.card__question[open] {
+    font-weight: 700;
+   
+}
+.card__question[open] .arrow__icon{
+transform: rotate(180deg);
+transition: 400ms;
+
+}
+.card__question--main{
+    list-style: none;
+    position: relative;
+    
+}
+.card__question--main:hover{
+    color: var(--Soft_red);
+    font-weight: 700;
+    cursor: pointer;
+}
+.arrow__icon{
+    position: absolute;
+    right: 1rem;
+    transition:400ms;
+}
+.cardRigth{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+.card__img{
+    height: 11.5rem;
+    width: 15rem;
+    position: absolute;
+    bottom: 3.5rem;
+    right: 1.5rem;
+}
+.cardLeft{
+    position: relative;
+   }  
+
+   .card__question--answer{
+    font-weight: 400;
+    color: var(--Soft_violet);
+    font-size: 12px;
+    margin-top: 10px;
+
+   }
+   hr{
+    border-color: transparent;
+    border-bottom-color:var(--Soft_violet) ;
+   }
+/* -------------------FOOTER----------------- */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media(min-width:925px){
+
+    .card{
+        width:58rem;
+        height:32rem;
+        padding: 3rem;
+        display: flex;
+        flex-direction: row;
+       
+    }
+    .cardRigth{
+        width: 50%;
+        height: 100%;
+        background-color: white;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .cardLeft{
+        width: 50%;
+        height:100%;
+    }  
+    .card__img{
+        height: 23rem;
+        width: 27rem;
+        position: relative;
+        bottom: 0rem;
+        right: 5.5rem;
+    }
+}
